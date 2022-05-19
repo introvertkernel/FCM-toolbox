@@ -1,39 +1,36 @@
 {
   "project_info": {
-    "project_number": "322141800886",
-    "firebase_url": "https://fir-cloudmessaging-4e2cd.firebaseio.com",
-    "project_id": "fir-cloudmessaging-4e2cd",
-    "storage_bucket": "fir-cloudmessaging-4e2cd.appspot.com"
+    "project_number": "643730884028",
+    "project_id": "fcm-toolbox-aa680",
+    "storage_bucket": "fcm-toolbox-aa680.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:322141800886:android:7b41fd8ce1e97722",
+        "mobilesdk_app_id": "1:643730884028:android:8f45c68105e2c4f0a8d7b9",
         "android_client_info": {
-          "package_name": "fr.smarquis.fcm"
+          "package_name": "in.gb.fcm"
         }
       },
       "oauth_client": [
         {
-          "client_id": "322141800886-m5t38esqjr530esfetarjodm4hcoofpd.apps.googleusercontent.com",
+          "client_id": "643730884028-ehjdi4t4j1qmm2i0ijds1atugfq92k5h.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDBHR45cWSsnJw-7inTYFDtK39-0TpjlhA"
+          "current_key": "AIzaSyBHdZW7A-wCeEjlblF8tsqpgtgaSwPlCjY"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
+          "other_platform_oauth_client": [
+            {
+              "client_id": "643730884028-ehjdi4t4j1qmm2i0ijds1atugfq92k5h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
