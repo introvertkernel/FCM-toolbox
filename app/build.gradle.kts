@@ -12,10 +12,10 @@ val versionPatch = 3
 val versionBuild = 0
 
 android {
-    compileSdk = 30
+    compileSdk = 31
     defaultConfig {
-        applicationId = "fr.smarquis.fcm"
-        minSdk = 16
+        applicationId = "com.gb.fcm"
+        minSdk = 19
         targetSdk = 30
         versionCode = versionMajor * 1000000 + versionMinor * 10000 + versionPatch * 100 + versionBuild
         versionName = "$versionMajor.$versionMinor.$versionPatch"
@@ -81,10 +81,39 @@ dependencies {
     implementation("com.squareup.moshi:moshi-adapters:${versionFor(Square.moshi)}")
 
     /* Room: SQLite persistence */
-    implementation(AndroidX.room.runtime)
-    kapt(AndroidX.room.compiler)
-    implementation(AndroidX.room.ktx)
-    testImplementation(AndroidX.room.testing)
+//    implementation(AndroidX.room.runtime)
+//    kapt(AndroidX.room.compiler)
+//    kapt("androidx.room:room-compiler:2.4.2")
+//    implementation(AndroidX.room.ktx)
+//    testImplementation(AndroidX.room.testing)
+
+    val roomVersion = "2.4.2"
+
+    implementation("androidx.room:room-runtime:$roomVersion")
+    annotationProcessor("androidx.room:room-compiler:$roomVersion")
+
+    // To use Kotlin annotation processing tool (kapt)
+    kapt("androidx.room:room-compiler:$roomVersion")
+    // To use Kotlin Symbolic Processing (KSP)
+//    ksp("androidx.room:room-compiler:$roomVersion")
+
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation("androidx.room:room-ktx:$roomVersion")
+
+    // optional - RxJava2 support for Room
+    implementation("androidx.room:room-rxjava2:$roomVersion")
+
+    // optional - RxJava3 support for Room
+    implementation("androidx.room:room-rxjava3:$roomVersion")
+
+    // optional - Guava support for Room, including Optional and ListenableFuture
+    implementation("androidx.room:room-guava:$roomVersion")
+
+    // optional - Test helpers
+    testImplementation("androidx.room:room-testing:$roomVersion")
+
+    // optional - Paging 3 Integration
+    implementation("androidx.room:room-paging:2.5.0-alpha01")
 
     /* Kotlin Coroutines */
     implementation(KotlinX.coroutines.core)

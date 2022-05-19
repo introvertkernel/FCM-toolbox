@@ -46,7 +46,7 @@
             tools:ignore="ContentDescription"
             tools:src="@drawable/ic_notifications_none_24dp" />
 
-        <fr.smarquis.fcm.view.ui.TimeAgoTextView
+        <com.gb.fcm.view.ui.TimeAgoTextView
             android:id="@+id/timestamp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
